@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @scene.subject %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @scene.content %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @scene.photo %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @scene.activity_id %>
+</p>
+
+<%= link_to 'Edit', edit_scene_path(@scene) %> |
+<%= link_to 'Back', scenes_path %>

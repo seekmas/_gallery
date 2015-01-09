@@ -1,0 +1,5 @@
+<% @activities.each do |activity| %>
+
+    <p><%=link_to activity.subject, :controller => 'app', :action => 'show' ,:id => activity.id%></p>
+
+<% end %>

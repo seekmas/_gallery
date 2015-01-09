@@ -1,0 +1,46 @@
+
+<p>
+    <strong>Subject:</strong>
+    <%= @activity.subject %>
+</p>
+
+
+
+<% content_for :js do %>
+
+<script type="text/javascript">
+var ultraVisualData = {
+    "Featured": [
+
+        <% @activity.scenes.each do |scene|  %>
+        {
+            "title": "<strong><%= scene.subject%></strong>",
+            "paragraph": "",
+            "img": "<%= scene.photo.url%>"
+        } ,
+        <% end %>
+
+    ]
+};
+require.config({
+    baseUrl: '/'
+});
+require(['/famous/main.js']);
+</script>
+<% end %>
+
+
+<div id="list-wrapper">
+
+</div>
+
+<div id="menu-wrapper">
+    <div id="menu-bg"></div>
+    <div id="menu-button">
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+    </div>
+    <div class="text"><a href="weixin://profile/gh_8808c0f6f31c">关注我们 微信公众号</a></div>
+</div>
