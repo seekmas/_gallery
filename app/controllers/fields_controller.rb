@@ -1,5 +1,6 @@
 class FieldsController < ApplicationController
   before_action :set_field, only: [:show, :edit, :update, :destroy]
+  layout 'bootstrap'
 
   # GET /fields
   # GET /fields.json
@@ -69,6 +70,6 @@ class FieldsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def field_params
-      params.require(:field).permit(:key_name, :value_name, :activity_id)
+      params.require(:field).permit(:key_name, :value_name, :activity_id, :order_id)
     end
 end

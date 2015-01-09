@@ -1,0 +1,20 @@
+<table class="table">
+<tr>
+<% @activity.fields.each do |field| %>
+    <td><%=field.value_name%></td>
+<% end %>
+</tr>
+
+<% @activity.visitors.each do |v| %>
+
+<tr>
+    <% v.results.each do |result| %>
+
+    <td><%=result.field_value%></td>
+
+    <% end %>
+</tr>
+
+<% end %>
+
+</table>

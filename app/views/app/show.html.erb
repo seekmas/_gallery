@@ -1,4 +1,6 @@
-
+<% content_for :title do %>
+    <%= @activity.subject %>
+<% end %>
 <p>
     <strong>Subject:</strong>
     <%= @activity.subject %>
@@ -16,7 +18,7 @@ var ultraVisualData = {
         {
             "title": "<strong><%= scene.subject%></strong>",
             "paragraph": "",
-            "img": "<%= scene.photo.url%>"
+            "img": "<%= scene.photo.url(:medium)%>"
         } ,
         <% end %>
 

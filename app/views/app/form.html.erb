@@ -1,0 +1,16 @@
+<%= form_tag '/form_handle' do %>
+
+<%= hidden_field_tag(:activity_id, @activity.id) %>
+
+<% @activity.fields.each do |field| %>
+
+    <div class="form-group">
+        <%=label_tag field.value_name %>
+        <%=text_field_tag field.id %>
+    </div>
+
+<% end %>
+
+
+<div><%= submit_tag 'Save' %></div>
+<% end %>

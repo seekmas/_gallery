@@ -1,4 +1,4 @@
-<%= form_for(@scene) do |f| %>
+<%= bootstrap_form_for(@scene ,layout: :horizontal, label_errors: true) do |f| %>
   <% if @scene.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@scene.errors.count, "error") %> prohibited this scene from being saved:</h2>

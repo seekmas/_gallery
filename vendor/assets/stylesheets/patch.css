@@ -3,6 +3,14 @@ body {
     background-color: black;
 }
 
+a{
+    color: #ffffff;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
 /* Ultra visual stuff */
 .title {
     text-align: center;

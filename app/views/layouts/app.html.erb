@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>mini画廊</title>
+    <title><%= yield :title %></title>
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -21,7 +21,6 @@
     <!-- famous -->
     <link rel="stylesheet" type="text/css" href="https://code.famo.us/famous/0.2.0/famous.css" />
     <script type="text/javascript" src="https://code.famo.us/famous/0.2.0/famous.min.js"></script>
-
 
     <%= yield :js %>
 

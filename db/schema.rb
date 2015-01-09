@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109030326) do
+ActiveRecord::Schema.define(version: 20150109090113) do
 
   create_table "activities", force: true do |t|
     t.string   "subject"
@@ -21,12 +21,30 @@ ActiveRecord::Schema.define(version: 20150109030326) do
     t.datetime "updated_at"
   end
 
+  create_table "anonymous", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "activity_id"
+  end
+
   create_table "fields", force: true do |t|
     t.string   "key_name"
     t.string   "value_name"
     t.integer  "activity_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order_id"
+  end
+
+  create_table "results", force: true do |t|
+    t.integer  "field_id"
+    t.string   "field_value"
+    t.integer  "anonymous_id"
+    t.integer  "activity_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "visitor_id"
   end
 
   create_table "scenes", force: true do |t|
@@ -40,6 +58,12 @@ ActiveRecord::Schema.define(version: 20150109030326) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+  end
+
+  create_table "visitors", force: true do |t|
+    t.integer  "activity_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

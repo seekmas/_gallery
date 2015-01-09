@@ -1,6 +1,6 @@
 <h1>Listing fields</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Key name</th>
@@ -15,7 +15,7 @@
       <tr>
         <td><%= field.key_name %></td>
         <td><%= field.value_name %></td>
-        <td><%= field.activity_id %></td>
+        <td><%= field.activity.subject %></td>
         <td><%= link_to 'Show', field %></td>
         <td><%= link_to 'Edit', edit_field_path(field) %></td>
         <td><%= link_to 'Destroy', field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
