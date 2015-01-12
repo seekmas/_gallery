@@ -75,7 +75,7 @@ define(function(require, exports, module) {
 
 		this.banSurf = new Surface({
 			size: [undefined, undefined],
-			content: '<img class="img-top" src="assets/img-top.png" />'
+			content: ''
 		});
 
 		// TEXT SURFACE + MODIFIER

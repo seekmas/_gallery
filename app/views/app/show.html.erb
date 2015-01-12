@@ -13,7 +13,6 @@
 <script type="text/javascript">
 var ultraVisualData = {
     "Featured": [
-
         <% @activity.scenes.each do |scene|  %>
         {
             "title": "<strong><%= scene.subject%></strong>",
@@ -21,7 +20,6 @@ var ultraVisualData = {
             "img": "<%= scene.photo.url(:medium)%>"
         } ,
         <% end %>
-
     ]
 };
 require.config({
@@ -36,6 +34,9 @@ require(['/famous/main.js']);
 
 </div>
 
+
+
+
 <div id="menu-wrapper">
     <div id="menu-bg"></div>
     <div id="menu-button">
@@ -44,5 +45,11 @@ require(['/famous/main.js']);
         <div class="menu-line"></div>
         <div class="menu-line"></div>
     </div>
-    <div class="text"><a href="weixin://profile/gh_8808c0f6f31c">关注我们 微信公众号</a></div>
+    <div class="text">
+
+        <%=link_to '立即报名' , :controller => :app , :action => :form , :id => @activity.id %><br/>
+
+        <a href="weixin://profile/gh_8808c0f6f31c">关注我们 微信公众号</a>
+
+    </div>
 </div>

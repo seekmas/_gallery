@@ -11,12 +11,14 @@ class AppController < ApplicationController
 
     def form
         @activity = Activity.includes(:scenes , :fields).find(query_id)
-        render layout: 'bootstrap'
+        render layout: 'wechat'
     end
 
     def form_handle
 
         @data = params
+
+        @activity = Activity.find(@data[:activity_id])
 
         @visotor = Visitor.create({:activity_id => @data[:activity_id]})
 
@@ -33,7 +35,7 @@ class AppController < ApplicationController
         end
 
 
-        render
+        render layout: 'wechat'
     end
 
 
